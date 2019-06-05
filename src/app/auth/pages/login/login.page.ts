@@ -67,9 +67,9 @@ export class LoginPage implements OnInit {
       console.log('Redirecting....');
     } catch (e) {
       console.log('Auth Error: ', e);
-      this.overlayService.toast({
+      await this.overlayService.toast({
         message: e.message
-      })
+      });
     } finally {
       loading.dismiss();
     }
