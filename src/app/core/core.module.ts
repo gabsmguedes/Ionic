@@ -7,13 +7,15 @@ import {BrowserModule} from "@angular/platform-browser";
 import {AngularFireModule} from "@angular/fire";
 import {environment} from "../../environments/environment";
 import {AngularFireAuthModule} from "@angular/fire/auth";
+import {AngularFirestoreModule} from "@angular/fire/firestore";
 
 @NgModule({
   declarations: [],
   imports: [
     IonicModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
   exports: [
       BrowserModule, IonicModule
