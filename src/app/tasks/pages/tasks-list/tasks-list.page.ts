@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Observable, of} from "rxjs";
+import {Task} from "../../models/task.model";
 
 @Component({
   selector: 'app-tasks-list',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TasksListPage implements OnInit {
 
+  tasks$: Observable<Task[]>;
+
   constructor() { }
 
   ngOnInit() {
+    this.tasks$ = of([
+      { id: 'daad', title: 'Ionic', done: false},
+      { id: 'daadaad', title: 'Firebase', done: false},
+    ]);
   }
 
 }
