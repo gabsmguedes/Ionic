@@ -15,7 +15,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     SharedModule,
-      ComponentsModule,
+    ComponentsModule,
     RouterModule.forChild(routes)
   ],
   declarations: [TasksListPage]
