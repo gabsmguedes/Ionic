@@ -15,7 +15,9 @@ import {AngularFirestoreModule} from "@angular/fire/firestore";
     IonicModule.forRoot(),
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule.enablePersistence({
+      experimentalTabSynchronization: true
+    })
   ],
   exports: [
       BrowserModule, IonicModule
